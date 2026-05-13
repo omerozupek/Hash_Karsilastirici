@@ -1,0 +1,27 @@
+def hash_karsilastir():
+    print("Hash Karşılaştırma Aracı")
+
+    hash1 = input("1. Hash değerini yapıştırın: ")
+    hash2 = input("2. Hash değerini yapıştırın: ")
+    
+    hash1_temiz = hash1.strip()
+    hash2_temiz = hash2.strip()
+    
+    print("\nKarşılaştırma Sonucu:")
+    
+    if hash1_temiz == hash2_temiz:
+        print("EŞLEŞTİ: İki hash değeri birbiriyle tamamen aynı.")
+        print("Güvenlik Durumu: Veri bütünlüğü DOĞRULANDI.")
+    else:
+        print("FARKLI: Hash değerleri birbiriyle eşleşmiyor.")
+        print("Güvenlik Durumu: Veri bütünlüğü BOZULMUŞ (Veri değiştirilmiş olabilir).")
+
+if __name__ == "__main__":
+    while True:
+        hash_karsilastir()
+        
+        secim = input("\nBaşka bir işlem yapmak istiyor musunuz? (Devam: 'e' / Çıkış: 'q'): ")
+        
+        if secim.lower() != 'e':
+            print("Programdan çıkılıyor. Güvenli günler dileriz!")
+            break
